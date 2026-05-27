@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Feedback</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        img {
+            width: 150px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Event Feedback Form</h2>
+    Phone Number:
+    <input type="text" onblur="checkPhone(this)">
+    <br><br>
+    Select Event:
+    <select onchange="showFee(this.value)">
+        <option>Select</option>
+        <option value="100">Music Event</option>
+        <option value="200">Sports Event</option>
+    </select>
+    <p id="fee"></p>
+    <img src="event.jpg" ondblclick="bigImage(this)">
+    <p>Double click image to enlarge</p>
+    <textarea onkeyup="countChar(this)" placeholder="Enter feedback"></textarea>
+    <p>Characters: <span id="count">0</span></p>
+    <button onclick="confirmMsg()">Submit</button>
+    <script>
+        function checkPhone(x) {
+            if (x.value.length != 10) {
+                alert("Enter valid phone number");
+            }
+        }
+        function showFee(fee) {
+            document.getElementById("fee").innerHTML =
+            "Event Fee: ₹" + fee;
+        }
+        function confirmMsg() {
+            alert("Feedback Submitted Successfully!");
+        }
+        function bigImage(img) {
+            img.style.width = "300px";
+        }
+        function countChar(text) {
+            document.getElementById("count").innerHTML =
+            text.value.length;
+        }
+    </script>
+</body>
+</html>

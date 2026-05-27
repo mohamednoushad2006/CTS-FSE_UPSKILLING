@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration Form</title>
+    <style>
+        body {
+            background-color: rgb(109, 109, 109);
+            text-align: center;
+        }
+        form {
+            width: 300px;
+            margin: auto;
+            border: 2px solid black;
+            padding: 20px;
+        }
+        input, select, textarea {
+            width: 90%;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Event Registration Form</h2>
+    <form action="succes.html">
+        <input type="text" placeholder="Enter your name" required autofocus>
+        <br>
+        <input type="email" placeholder="Enter your email" required>
+        <br>
+        <input type="date" required>
+        <br>
+        <select required>
+            <option value="">Select Event Type</option>
+            <option>Music event</option>
+            <option>Sports event</option>
+            <option>Food festival</option>
+        </select>
+        <br>
+        <textarea placeholder="Enter message" required></textarea>
+        <br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

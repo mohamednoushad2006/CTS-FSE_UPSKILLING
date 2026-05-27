@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Promo Video</title>
+
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Community Event Promo</h2>
+    <video width="400" controls oncanplay="videoReady()">
+        <source src="event.mp4" type="video/mp4">
+    </video>
+    <p id="message"></p>
+    <script>
+        function videoReady() {
+            document.getElementById("message").innerHTML =
+            "Video ready to play";
+        }
+        window.onbeforeunload = function () {
+            return "Are you sure you want to leave?";
+        };
+    </script>
+</body>
+</html>

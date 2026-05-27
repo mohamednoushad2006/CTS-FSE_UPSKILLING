@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nearby Events Locator</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+        }
+        .box {
+            width: 400px;
+            margin: auto;
+            margin-top: 50px;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Find Nearby Events</h2>
+        <button onclick="findLocation()">
+            Find Nearby Events
+        </button>
+        <p id="result">
+            Click the button to get your location
+        </p>
+    </div>
+    <script>
+        function findLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    showPosition,
+                    showError,
+                    {
+                        enableHighAccuracy: true,
+                        timeout: 10000,
+                        maximumAge: 0
+                    }
+                );
+            } else {
+                document.getElementById("result")
+                .innerHTML =
+                "Geolocation is not supported.";
+            }
+        }
+        function showPosition(position) {
+            let latitude =
+            position.coords.latitude;
+            let longitude =
+            position.coords.longitude;
+            document.getElementById("result")
+            .innerHTML =
+            "Latitude: " + latitude +
+            "<br>Longitude: " + longitude;
+        }
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    document.getElementById(
+                    "result").innerHTML =
+                    "Location access denied.";
+                    break;
+                case error.TIMEOUT:
+                    document.getElementById(
+                    "result").innerHTML =
+                    "Request timed out.";
+                    break;
+                default:
+                    document.getElementById(
+                    "result").innerHTML =
+                    "Unable to get location.";
+            }
+        }
+
+    </script>
+
+</body>
+</html>
