@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bootstrap Display Utilities</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <div class="container mt-5">
+
+        <h2 class="text-center text-primary mb-5">
+            Bootstrap Display & Visibility Utilities
+        </h2>
+
+        <div class="d-none bg-danger text-white p-4 rounded mb-4">
+
+            <h4>
+                Hidden Section
+            </h4>
+
+            <p class="mb-0">
+                This section is hidden on all screen sizes using d-none.
+            </p>
+
+        </div>
+
+        <div class="d-none d-md-block bg-success text-white p-4 rounded mb-4">
+
+            <h4>
+                Medium Screen Section
+            </h4>
+
+            <p class="mb-0">
+                This section becomes visible on medium screens and above.
+            </p>
+
+        </div>
+
+        <div class="d-none d-lg-flex
+                    bg-dark
+                    text-white
+                    p-4
+                    rounded
+                    justify-content-between
+                    align-items-center">
+
+            <div>
+
+                <h4>
+                    Large Screen Flex Section
+                </h4>
+
+                <p class="mb-0">
+                    This section appears as flex layout only on large screens.
+                </p>
+
+            </div>
+
+            <button class="btn btn-outline-light mt-3 mt-lg-0">
+                Explore
+            </button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

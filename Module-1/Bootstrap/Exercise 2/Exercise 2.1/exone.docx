@@ -1,0 +1,100 @@
+Exercise 2.1 — Bootstrap Structure and Files
+
+When Bootstrap is downloaded or installed, it contains different folders and files required for styling and interactive features.
+
+A typical Bootstrap directory structure looks like this:
+
+bootstrap/
+│
+├── css/
+│     ├── bootstrap.css
+│     ├── bootstrap.min.css
+│     ├── bootstrap-grid.css
+│     └── bootstrap-utilities.css
+│
+├── js/
+│     ├── bootstrap.js
+│     ├── bootstrap.bundle.js
+│     └── bootstrap.bundle.min.js
+│
+└── icons/
+      ├── fonts/
+      └── bootstrap-icons.css
+1. CSS Folder
+
+The css folder contains Bootstrap styling files.
+
+Purpose
+
+It is used to:
+
+Design webpages
+Apply layouts
+Add colors, spacing, buttons, forms, tables, etc.
+Important CSS Files
+File Name	Purpose
+bootstrap.css	Full Bootstrap CSS file
+bootstrap.min.css	Compressed version for faster loading
+bootstrap-grid.css	Contains only grid system
+bootstrap-utilities.css	Contains utility classes
+Example
+<link rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+This file gives Bootstrap styles to the webpage.
+
+2. JS Folder
+
+The js folder contains JavaScript files.
+
+Purpose
+
+Used for interactive Bootstrap components such as:
+
+Modal
+Carousel
+Dropdown
+Tooltip
+Collapse
+Navbar toggle
+
+Without JS files, these components will not work properly.
+
+Important JS Files
+File Name	Purpose
+bootstrap.js	Main Bootstrap JavaScript
+bootstrap.bundle.js	Includes Bootstrap + Popper.js
+bootstrap.bundle.min.js	Minified version for production
+Example
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+This enables Bootstrap interactive features.
+
+3. Icons Folder
+
+The icons folder contains Bootstrap Icons.
+
+Purpose
+
+Used to add icons such as:
+
+Home
+Search
+User
+Bell
+Menu
+Cart
+
+These icons improve webpage appearance and user experience.
+
+Important Files
+File Name	Purpose
+bootstrap-icons.css	Icon styling file
+fonts/	Stores icon font files
+Example
+<link rel="stylesheet"
+href="icons/bootstrap-icons.css">
+
+Using an icon:
+
+<i class="bi bi-house-fill"></i>
