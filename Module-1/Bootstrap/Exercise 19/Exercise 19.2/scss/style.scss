@@ -1,0 +1,17 @@
+// Import Custom Variables First
+@import "variables";
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// Custom Styling
+body
+{
+    background-color: #f8f9fa;
+}
+
+.custom-card
+{
+    padding: 40px;
+    text-align: center;
+}
